@@ -1,0 +1,238 @@
+/* Existing home.css (unchanged from the previous provided code) */
+
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #1B1E1F;
+    padding: 10px 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 6vw;
+}
+#image img{
+    height: 70px;
+    width: 70px;
+    margin-left: 6vw;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(237, 236, 242);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #DCD1D4;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeInDown 2s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    animation: fadeInUp 2s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    animation: fadeIn 3s ease-out;
+}
+
+.btn:hover {
+    background-color: #e55337;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #ff6347, #1e90ff, #ff6347, #1e90ff);
+    animation: move 10s linear infinite;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+@keyframes move {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Sections common styles */
+.about-section, .services-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #DCD1D4;
+}
+
+.about-section h2, .services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    animation: fadeInUp 2s ease-out;
+}
+
+.services-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    animation: fadeIn 2s ease-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Footer styles */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+#hey{
+    background-color:#1B1E1F;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    color: #ff6347;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6347;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Additional animation for gradient in hero section */
+@keyframes move {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
